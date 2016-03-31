@@ -15,7 +15,7 @@ Possibly QT, Possibly C# with XAML
 
 <b>Screen Shots:</b>
 
-(INSERT SWEET SCREEN SHOTS HERE)
+![alt tag](https://github.com/3xFail/CST238GUIProject.git/img/Start Screen.png)
 
 <b>Installation Instructions:</b>
 
