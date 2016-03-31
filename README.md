@@ -1,32 +1,42 @@
 # CST238GUIProject
 This is a GUI project for my CST 238 class at Oregon Institute of Technology 
 
-Project Logo:
+<b>Project Logo:</b>
+
 (INSERT SWEET LOGO HERE)
 
-Description:
+<b>Description:</b>
+
 This is a GUI project that I will be using to complete the requirements to of my class. Currently undecided on the technologies that will be involed in the project. But the main idea I have right now is a movie manager program that takes video format files and presents them in a easy to view way. The program will eventually be used for my senior project in school. 
 
-Technologies:
+<b>Technologies:</b>
+
 Possibly QT, Possibly C# with XAML
 
-Screen Shots:
+<b>Screen Shots:</b>
+
 (INSERT SWEET SCREEN SHOTS HERE)
 
-Installation Instructions:
+<b>Installation Instructions:</b>
+
 TBD Planing on learning this as the term continues 
 
-Contrbution Guidelines:
+<b>Contrbution Guidelines:</b>
+
 As this is a school project feel free to clone and edit on your own but please do not directly modify master branch.
 
-Bugs and Todo list:
+<b>Bugs and Todo list:</b>
+
 Currrently Empty, please post if you find some.
 
-Contributor List:
+<b>Contributor List:</b>
+
 Ryan Williams - 3xFail
 
-Inspiration:
+<b>Inspiration:</b>
+
 My insperation for this idea came out of annoyance, I have many movies on my computer and often I want to watch a certain one or to find out if I already have a movie if im looking to get it. The only way for me to really do this is to search file explorer. But with the wave of remake movies that have been coming out recently is causing me alot of headache when trying to find the right one. 
 
-License:
+<b>License:</b>
+
 GNU V3.0
