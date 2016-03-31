@@ -7,7 +7,7 @@ This is a GUI project for my CST 238 class at Oregon Institute of Technology
 
 <b>Description:</b>
 
-This is a GUI project that I will be using to complete the requirements to of my class. Currently undecided on the technologies that will be involed in the project. But the main idea I have right now is a movie manager program that takes video format files and presents them in a easy to view way. The program will eventually be used for my senior project in school. 
+This is a GUI project that I will be using to complete the requirements to of my class. Currently undecided on the technologies that will be involed in the project. But the main idea I have right now is a tennis match tracking app that could be used my players or stat keepers to keep track of the missed shots and points for the current match aswell as a log to track your pervious actions in other matches 
 
 <b>Technologies:</b>
 
@@ -16,7 +16,7 @@ Possibly QT, Possibly C# with XAML
 <b>Screen Shots:</b>
 
 <b>Splash Screen</b>
-![Alt text](img/Start_Screen.png?raw=true "Title")
+
 
 <b>Catalog</b>
 ![Alt text](img/Main_view.png?raw=true "Title")
@@ -40,7 +40,7 @@ Ryan Williams - 3xFail
 
 <b>Inspiration:</b>
 
-My insperation for this idea came out of annoyance, I have many movies on my computer and often I want to watch a certain one or to find out if I already have a movie if im looking to get it. The only way for me to really do this is to search file explorer. But with the wave of remake movies that have been coming out recently is causing me alot of headache when trying to find the right one. 
+My insperation for this idea came out of annoyance. You always want to try to get better at things you like. For me that is tennis, but after a match I could only think over one or two points that really bugged me. Without anyway to remember the events of the match, short of a spectator writing them down for you, there was know way to know what you should focus practicing on todo better. With this players can have a accurate idea of what they may need to focus more on in practices.
 
 <b>License:</b>
 
