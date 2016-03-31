@@ -15,10 +15,12 @@ Possibly QT, Possibly C# with XAML
 
 <b>Screen Shots:</b>
 
+<b>Splash Screen</b>
 ![Alt text](img/Start_Screen.png?raw=true "Title")
 
-![alt tag](https://github.com/3xFail/CST238GUIProject.git/img/Start Screen.png)
-![alt tag](https://raw.githubusercontent.com/3xFail/CSTGUIProject/master/img/Start Screen.png)
+<b>Catalog</b>
+![Alt text](img/Main_view.png?raw=true "Title")
+
 
 <b>Installation Instructions:</b>
 
