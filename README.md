@@ -17,8 +17,6 @@ Possibly QT, Possibly C# with XAML
 
 <b>Splash Screen</b>
 
-
-<b>Catalog</b>
 ![Alt text](img/Main_view.png?raw=true "Title")
 
 
