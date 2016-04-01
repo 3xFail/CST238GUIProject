@@ -17,7 +17,10 @@ Possibly QT, Possibly C# with XAML
 
 <b>Splash Screen</b>
 
-![Alt text](img/Main_view.png?raw=true "Title")
+![Alt text](img/Splash_Screen.png?raw=true "Title")
+![Alt text](img/Main_View.png?raw=true "Title")
+![Alt text](img/Main_Catalog.png?raw=true "Title")
+![Alt text](img/Unforced_Error_Chart.png?raw=true "Title")
 
 
 <b>Installation Instructions:</b>
