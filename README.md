@@ -1,10 +1,9 @@
 # CST238GUIProject
 This is a GUI project for my CST 238 class at Oregon Institute of Technology 
 
-<b>Project Logo:</b>
+<b>Logo:</b>
 ![Alt text](img/Logo.png?raw=true "Title")
 
-(INSERT SWEET LOGO HERE)
 
 <b>Description:</b>
 
