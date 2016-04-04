@@ -2,6 +2,7 @@
 This is a GUI project for my CST 238 class at Oregon Institute of Technology 
 
 <b>Project Logo:</b>
+![Alt text](img/Logo.png?raw=true "Title")
 
 (INSERT SWEET LOGO HERE)
 
