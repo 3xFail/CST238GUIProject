@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Court_Background.qml</file>
+        <file>../../img/Tennis_Court_diagram.png</file>
+        <file>Splash_Screen.qml</file>
+        <file>MyButton.qml</file>
+        <file>TextRect.qml</file>
+        <file>Dialog_Box.qml</file>
+    </qresource>
+</RCC>
