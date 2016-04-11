@@ -23,6 +23,7 @@ Rectangle {
            id: start_match_but
            height: 100
            width: 240
+           color: "Lime"
            text: "Start a match"
            text_size: 16
            anchors.horizontalCenter: parent.horizontalCenter
@@ -35,6 +36,7 @@ Rectangle {
            id:match_catalog_but
            height: 100
            width: 240
+           color: "Lime"
            text: "Previous matches"
            text_size: 16
            anchors.horizontalCenter: parent.horizontalCenter
@@ -47,6 +49,7 @@ Rectangle {
            id: focus_but
            height: 100
            width: 240
+           color: "Lime"
            text: "Focus Point"
            text_size: 16
            anchors.horizontalCenter: parent.horizontalCenter
@@ -59,6 +62,7 @@ Rectangle {
            id:error_but
            height: 100
            width: 240
+           color: "Lime"
            text: "Errors Chart"
            text_size: 16
            anchors.horizontalCenter: parent.horizontalCenter

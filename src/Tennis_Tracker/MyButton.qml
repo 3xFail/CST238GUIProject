@@ -2,10 +2,13 @@ import QtQuick 2.6
 
 Rectangle {
     //height and width will be defined outside
-    color: "Grey"
     radius: parent.width * .2
     property alias text: but_Text.text
     property alias text_size: but_Text.font.pointSize
+
+    property color previouscolor: color
+
+
     Text{
         id: but_Text
         color: "Black"
@@ -16,7 +19,10 @@ Rectangle {
     MouseArea{
         hoverEnabled: true
         anchors.fill: parent
-        onEntered: { parent.color = "Yellow" }
-        onExited: { parent.color = "Grey"}
+        onEntered: {
+            previouscolor = parent.color
+            parent.color = "Yellow"
+        }
+        onExited: { parent.color = parent.previouscolor }
     }
 }
