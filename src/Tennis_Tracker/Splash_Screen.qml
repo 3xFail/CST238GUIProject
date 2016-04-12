@@ -7,7 +7,7 @@ Rectangle {
 
     Court_Background{
         id:background
-        anchors.fill: parent
+
         Text{
             color: "#fbf8f8"
             anchors.horizontalCenter: background.horizontalCenter
@@ -81,6 +81,17 @@ Rectangle {
            anchors.horizontalCenter: parent.horizontalCenter
            anchors.verticalCenter: parent.verticalCenter
            anchors.verticalCenterOffset: -125
+       }
+
+       Dialog_Box{
+           height: 200
+           width: 630
+           text1: "Hint #1: Click on a button to continue\n"
+           text2: "Hint #2: Not that button\n"
+           anchors.horizontalCenter: parent.horizontalCenter
+           anchors.verticalCenter: parent.verticalCenter
+           anchors.verticalCenterOffset: 125
+
        }
     }
 

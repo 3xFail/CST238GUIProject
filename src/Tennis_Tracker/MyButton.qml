@@ -7,6 +7,7 @@ Rectangle {
     property alias text_size: but_Text.font.pointSize
 
     property color previouscolor: color
+    property alias onclicked: but_ma.onClicked
 
 
     Text{
@@ -17,6 +18,7 @@ Rectangle {
     }
 
     MouseArea{
+        id: but_ma
         hoverEnabled: true
         anchors.fill: parent
         onEntered: {
@@ -24,5 +26,6 @@ Rectangle {
             parent.color = "Yellow"
         }
         onExited: { parent.color = parent.previouscolor }
+
     }
 }
