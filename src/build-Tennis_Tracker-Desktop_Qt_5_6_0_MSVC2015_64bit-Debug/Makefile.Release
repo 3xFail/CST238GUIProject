@@ -159,6 +159,7 @@ release\qrc_qml.cpp: ..\Tennis_Tracker\qml.qrc \
 		..\Tennis_Tracker\Splash_Screen.qml \
 		..\Tennis_Tracker\TextRect.qml \
 		..\Tennis_Tracker\Court_Background.qml \
+		..\Tennis_Tracker\Dialog_Box.qml \
 		..\Tennis_Tracker\MyButton.qml \
 		..\Tennis_Tracker\main.qml \
 		..\..\img\Tennis_Court_diagram.png

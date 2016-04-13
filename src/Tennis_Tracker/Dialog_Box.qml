@@ -1,21 +1,19 @@
 import QtQuick 2.6
 
-
-
-
 Rectangle{
 
     property alias text1: dia_one.text
     property alias text2: dia_two.text
+    color: "Transparent"
 
     TextRect{
         id:dia_one
         visible: true
         text_color: "White"
         text_size: 12
+        color: "Transparent"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-
     }
 
     TextRect{
@@ -23,15 +21,17 @@ Rectangle{
         visible:false
         text_color: "White"
         text_size: 12
+        color: "Transparent"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-
     }
 
     MyButton{
         id:dia_but
         text: "Next"
-        onclicked:{
+        height: parent.height* .2
+        width: parent.width * .3
+        ma.onClicked:{
             //insert code here
             if(dia_one.visible)
             {
@@ -44,8 +44,8 @@ Rectangle{
                 dia_one.visible = true
             }
         }
-        anchors.right: parent.right
-        anchors.bottom: parent.Bottom
-
+        color: "Lime"
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
     }
 }

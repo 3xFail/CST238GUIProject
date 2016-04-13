@@ -2,12 +2,13 @@ import QtQuick 2.6
 
 Rectangle {
     //height and width will be defined outside
+    id: button_rect
     radius: parent.width * .2
     property alias text: but_Text.text
     property alias text_size: but_Text.font.pointSize
 
     property color previouscolor: color
-    property alias onclicked: but_ma.onClicked
+    property alias ma: but_ma
 
 
     Text{
