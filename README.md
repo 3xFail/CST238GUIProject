@@ -17,9 +17,18 @@ QT with C++ coding behind
 
 <b>Splash Screen</b>
 
-![Alt text](img/Splash_Screen.png?raw=true "Title")
-![Alt text](img/Match_View.png?raw=true "Title")
+![Alt text](img/Splash.png?raw=true "Title")
+
+<b>Match View</b>
+
+![Alt text](img/Match.png?raw=true "Title")
+
+<b>Match Catalog</b>
+
 ![Alt text](img/Match_Catalog.png?raw=true "Title")
+
+<b>Error Chart</b>
+
 ![Alt text](img/Unforced_Error_Chart.png?raw=true "Title")
 
 
