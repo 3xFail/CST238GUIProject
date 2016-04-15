@@ -156,11 +156,13 @@ compiler_rcc_make_all: release\qrc_qml.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_qml.cpp
 release\qrc_qml.cpp: ..\Tennis_Tracker\qml.qrc \
+		..\Tennis_Tracker\Match_Options_Window.qml \
 		..\Tennis_Tracker\Splash_Screen.qml \
 		..\Tennis_Tracker\TextRect.qml \
 		..\Tennis_Tracker\Court_Background.qml \
 		..\Tennis_Tracker\Dialog_Box.qml \
 		..\Tennis_Tracker\MyButton.qml \
+		..\Tennis_Tracker\Error_Chart.qml \
 		..\Tennis_Tracker\main.qml \
 		..\Tennis_Tracker\Match_Screen.qml \
 		..\..\img\Tennis_Court_diagram.png

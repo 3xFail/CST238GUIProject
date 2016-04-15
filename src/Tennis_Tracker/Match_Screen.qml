@@ -1,97 +1,30 @@
 import QtQuick 2.6
-import QtQuick.Controls 1.4
-import QtQuick.Controls.Styles 1.4
+
 
 Rectangle {
     id:match_root
     property int mins: 0
+    property string player1name: "\0"
+    property string player2name: "\0"
+    property string player3name: "\0"
+    property string player4name: "\0"
 
     signal match_end
 
     Court_Background{
         id: background
 
-        Rectangle{
+        Match_Options_Window{
             id:match_setup_win
-            height: 600
-            color: "#e0e0e0"
-            border.color: "black"
-            border.width: 5
+            height: 300
             width: 800
             anchors.horizontalCenter: background.horizontalCenter
             anchors.verticalCenter: background.verticalCenter
-
-            Text{
-                text:"Match type:"
-                font.pixelSize: 18
-                anchors.top: match_setup_win.top
-                anchors.topMargin : 15
-                anchors.horizontalCenter: match_setup_win.horizontalCenter
-                anchors.horizontalCenterOffset: -200
-            }
-
-            Row{
-                anchors.horizontalCenter: match_setup_win.horizontalCenter
-                anchors.top: match_setup_win.top
-                anchors.topMargin : 15
-                spacing: 40
-
-                CheckBox{
-                    id:singles_check
-                    style: CheckBoxStyle{
-                        label: Text{
-                        text: "Singles"
-                        font.pixelSize: 18
-                        }
-                        indicator: Rectangle {
-                                        implicitWidth: 16
-                                        implicitHeight: 16
-                                        radius: 3
-                                        border.color: control.activeFocus ? "darkblue" : "gray"
-                                        border.width: 1
-                                        Rectangle {
-                                            visible: control.checked
-                                            color: "#555"
-                                            border.color: "#333"
-                                            radius: 1
-                                            anchors.margins: 4
-                                            anchors.fill: parent
-                                        }
-                        }
-                    }
-
-                }
-                CheckBox{
-                    id: doubles_check
-                    style: CheckBoxStyle{
-                        label: Text{
-                        text: "Doubles"
-                        font.pixelSize: 18
-                        }
-                        indicator: Rectangle {
-                                        implicitWidth: 16
-                                        implicitHeight: 16
-                                        radius: 3
-                                        border.color: control.activeFocus ? "darkblue" : "gray"
-                                        border.width: 1
-                                        Rectangle {
-                                            visible: control.checked
-                                            color: "#555"
-                                            border.color: "#333"
-                                            radius: 1
-                                            anchors.margins: 4
-                                            anchors.fill: parent
-                                        }
-                        }
-                    }
-                }
-            }
         }
 
         //Scoreboard object
         //todo: make the thing
-        TextRect
-        {
+        TextRect{
             height: 150
             width: 220
             color: "transparent"
@@ -159,6 +92,7 @@ Rectangle {
             ma.onClicked:{
                 timer.stop()
                 timer.restart()
+                match_setup_win.visible = true
                 match_root.match_end()
             }
 
