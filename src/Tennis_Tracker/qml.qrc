@@ -7,5 +7,6 @@
         <file>MyButton.qml</file>
         <file>TextRect.qml</file>
         <file>Dialog_Box.qml</file>
+        <file>Match_Screen.qml</file>
     </qresource>
 </RCC>

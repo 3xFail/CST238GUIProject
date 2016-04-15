@@ -1,5 +1,6 @@
 import QtQuick 2.6
 import QtQuick.Controls 1.5
+import QtQuick.Window 2.2
 
 /**********************************************
 *Name:  Ryan Williams
@@ -8,15 +9,33 @@ import QtQuick.Controls 1.5
 *
 *Project Name: Tennis Tracker
 ***********************************************/
-ApplicationWindow {
+Window {
     visible: true
     id:main_Window
-    width: 1920
-    height: 1080
+    width: Screen.width
+    height: Screen.height
+    visibility: "Maximized"
     title: qsTr("Tennis Tracker Pro")
 
-    Splash_Screen{
+
+    Match_Screen{
+        id: match_screen
+        visible: false
         anchors.fill: parent
+        onMatch_end: {
+            splash.visible = true
+            match_screen.visible = false
+        }
+    }
+
+    Splash_Screen{
+        id:splash
+        visible: true
+        anchors.fill: parent
+        onStart_match:{
+            match_screen.visible = true
+            splash.visible = false
+        }
     }
 
 }

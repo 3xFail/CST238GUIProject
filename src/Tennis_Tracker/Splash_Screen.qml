@@ -2,8 +2,11 @@ import QtQuick 2.6
 import QtQuick.Controls 1.4
 
 Rectangle {
+    id:root
     height: parent.height
     width: parent.width
+
+    signal start_match
 
     Court_Background{
         id:background
@@ -30,6 +33,10 @@ Rectangle {
            anchors.horizontalCenterOffset: -550
            anchors.verticalCenter: parent.verticalCenter
            anchors.verticalCenterOffset: -150
+           ma.onClicked: {
+
+               root.start_match()
+           }
        }
 
        MyButton{
