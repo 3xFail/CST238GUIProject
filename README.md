@@ -17,11 +17,11 @@ QT with C++ coding behind
 
 <b>Splash Screen</b>
 
-![Alt text](img/Splash.png?raw=true "Title")
+![Alt text](img/Splash.PNG?raw=true "Title")
 
 <b>Match View</b>
 
-![Alt text](img/Match.png?raw=true "Title")
+![Alt text](img/Match.PNG?raw=true "Title")
 
 <b>Match Catalog</b>
 
