@@ -11,7 +11,7 @@ This is a GUI project that I will be using to complete the requirements to of my
 
 <b>Technologies:</b>
 
-Possibly QT, Possibly C# with XAML
+QT with C++ coding behind
 
 <b>Screen Shots:</b>
 
@@ -33,7 +33,7 @@ As this is a school project feel free to clone and edit on your own but please d
 
 <b>Bugs and Todo list:</b>
 
-Currrently Empty, please post if you find some.
+Currently Empty, please post if you find some.
 
 <b>Contributor List:</b>
 
