@@ -6,6 +6,7 @@ Rectangle {
     property alias text: r_text.text
     property alias text_size: r_text.font.pointSize
     property alias text_color: r_text.color
+    property alias text_prop: r_text
 
     Text{
         id:r_text

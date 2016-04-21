@@ -10,5 +10,6 @@
         <file>Match_Screen.qml</file>
         <file>Error_Chart.qml</file>
         <file>Match_Options_Window.qml</file>
+        <file>PlayerLocations.qml</file>
     </qresource>
 </RCC>

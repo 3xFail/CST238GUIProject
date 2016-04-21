@@ -163,6 +163,7 @@ release\qrc_qml.cpp: ..\Tennis_Tracker\qml.qrc \
 		..\Tennis_Tracker\Dialog_Box.qml \
 		..\Tennis_Tracker\MyButton.qml \
 		..\Tennis_Tracker\Error_Chart.qml \
+		..\Tennis_Tracker\PlayerLocations.qml \
 		..\Tennis_Tracker\main.qml \
 		..\Tennis_Tracker\Match_Screen.qml \
 		..\..\img\Tennis_Court_diagram.png

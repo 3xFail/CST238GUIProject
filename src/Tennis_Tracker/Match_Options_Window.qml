@@ -8,6 +8,9 @@ Rectangle{
     property string input_player2name: player2_input.text
     property string input_player3name: player3_input.text
     property string input_player4name: player4_input.text
+    property alias doubles_Check: doubles_check
+    property alias singles_Check: singles_check
+
 
     id:match_setup_win
     height: 600
@@ -16,7 +19,7 @@ Rectangle{
     border.width: 5
     width: 800
     visible: true
-
+    z:15
     //match type checkbox label
     Text{
         id:match_type_label
@@ -177,6 +180,8 @@ Rectangle{
         visible: {
             if(doubles_check.checked)
                 true
+            else
+                false
         }
         text: {
             if (doubles_check.checked)
@@ -452,12 +457,9 @@ Rectangle{
         anchors.horizontalCenter: match_setup_win.horizontalCenter
         anchors.horizontalCenterOffset: 325
         ma.onClicked: {
-
-            //assign input if its not empty to the right property
-
             //clear the input area
 
-
+            doubles_Check = doubles_check.checked
             match_setup_win.visible = false
         }
 

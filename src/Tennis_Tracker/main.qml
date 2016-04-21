@@ -17,7 +17,6 @@ Window {
     visibility: "Maximized"
     title: qsTr("Tennis Tracker Pro")
 
-
     Match_Screen{
         id: match_screen
         visible: false
@@ -26,6 +25,7 @@ Window {
             splash.visible = true
             match_screen.visible = false
         }
+
     }
 
     Splash_Screen{
