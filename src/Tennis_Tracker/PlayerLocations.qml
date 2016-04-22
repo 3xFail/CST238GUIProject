@@ -23,7 +23,7 @@ Rectangle {
         id:left_deuce_back
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -39,7 +39,7 @@ Rectangle {
         id:right_deuce_back
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "White"
@@ -55,7 +55,7 @@ Rectangle {
         id:right_ad_back
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -71,7 +71,7 @@ Rectangle {
         id:left_ad_back
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -89,7 +89,7 @@ Rectangle {
         id:left_deuce_front
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -105,7 +105,7 @@ Rectangle {
         id:left_ad_front
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -121,7 +121,7 @@ Rectangle {
         id:right_deuce_front
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"
@@ -137,7 +137,7 @@ Rectangle {
         id:right_ad_front
         height: 70
         width: 200
-        visible: false
+        //visible: true
         color: "transparent"
         text_prop.anchors.verticalCenterOffset: 0
         text_color: "white"

@@ -8,6 +8,8 @@ Rectangle {
     property alias text_color: r_text.color
     property alias text_prop: r_text
 
+    visible: r_text.text === "" ? false : true
+
     Text{
         id:r_text
         horizontalAlignment: Text.AlignHCenter

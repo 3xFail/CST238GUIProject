@@ -36,6 +36,22 @@ Window {
             match_screen.visible = true
             splash.visible = false
         }
+        onError_chart: {
+            //error_chart.visible = true
+            splash.visible = false
+        }
     }
+
+   /* Error_Chart{
+        id:error_chart
+        visible: true
+        anchors.fill: parent
+        //need close button
+        onClose:{
+            splash.visible = true
+            error_chart.visible = false
+        }
+
+    }*/
 
 }

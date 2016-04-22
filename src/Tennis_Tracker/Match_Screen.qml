@@ -4,8 +4,6 @@ import QtQuick 2.6
 Rectangle {
     id:match_root
     property int mins: 0
-
-
     property string player1name: "\0"
     property string player2name: "\0"
     property string player3name: "\0"
@@ -16,7 +14,7 @@ Rectangle {
     Court_Background{
         id: background
 
-        property bool match_type: doubles_Check.checked === true ? true : false //false is singles
+        property bool match_type: match_setup_win.doubles_Check //false is singles
 
         Match_Options_Window{
             id:match_setup_win
@@ -29,37 +27,14 @@ Rectangle {
         PlayerLocations{
             id: player_locs
 
-
-            /*singles_match:
-            {
-                left_deuce_back.visible = true
-                right_deuce_back.visible = true
-            }
-
-            doubles_match:
-            {
-                left_deuce_back.visible = true
-                right_deuce_back.visible = true
-                left_ad_front.visible = true
-                right_ad_front.visible = true
-            }
-
-            setup_match:
-            {
-                if (match_type === true)
-                    doubles_match()
-                else
-                    singles_match()
-            }*/
-
             //player one
             loc_left_deuce_back.text: match_setup_win.input_player1name
             //player 2 or 3
-            loc_right_deuce_back.text: match_type === false ? match_setup_win.input_player2name : match_setup_win.input_player3name
+            loc_right_deuce_back.text: background.match_type === false ? match_setup_win.input_player2name : match_setup_win.input_player3name
             //player 2 in doubles
-            loc_left_ad_front.text: match_type === false ? "" : match_setup_win.input_player2name
+            loc_left_ad_front.text: background.match_type === false ? "" : match_setup_win.input_player2name
             //player 4 in doubles
-            loc_right_ad_front.text: match_type === false ? "" : match_setup_win.input_player4name
+            loc_right_ad_front.text: background.match_type === false ? "" : match_setup_win.input_player4name
         }
 
         //Scoreboard object
@@ -130,14 +105,14 @@ Rectangle {
             anchors.leftMargin: 15
             anchors.verticalCenter: lose_smash.verticalCenter
             ma.onClicked:{
-                timer.stop()
+                //timer.stop()
                 timer.restart()
                 match_setup_win.visible = true
                 match_root.match_end()
-                match_setup_win.input_player1name = ""
-                match_setup_win.input_player2name = ""
-                match_setup_win.input_player3name = ""
-                match_setup_win.input_player4name = ""
+                match_setup_win.input_player1name.replace = ""
+                match_setup_win.input_player2name.replace = ""
+                match_setup_win.input_player3name.replace = ""
+                match_setup_win.input_player4name.replace = ""
             }
 
         }

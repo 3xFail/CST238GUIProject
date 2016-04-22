@@ -8,8 +8,8 @@ Rectangle{
     property string input_player2name: player2_input.text
     property string input_player3name: player3_input.text
     property string input_player4name: player4_input.text
-    property alias doubles_Check: doubles_check
-    property alias singles_Check: singles_check
+    property alias doubles_Check: doubles_check.checked
+    property alias singles_Check: singles_check.checked
 
 
     id:match_setup_win
@@ -41,7 +41,7 @@ Rectangle{
 
         CheckBox{
             id:singles_check
-            checked: true
+            checked: doubles_Check ? false : true
             style: CheckBoxStyle{
                 label: Text{
                     text: "Singles"
@@ -130,21 +130,20 @@ Rectangle{
     //player two label
     Text{
         id: player2_label
-        text: {
+        text:
+        {
+            font.pixelSize = 18
             if (singles_check.checked)
             {
-                //font.bold = true
-                font.pixelSize = 18
                 text.replace = "Opponent:"
             }
-            else if (doubles_check.checked)
+            else
             {
-                //font.bold = true
-                font.pixelSize = 18
                 text.replace = "Tracked partner:"
             }
         }
         visible: true
+
         anchors.right: player2_back.left
         anchors.rightMargin: 3
         anchors.verticalCenter: player2_back.verticalCenter
@@ -183,7 +182,8 @@ Rectangle{
             else
                 false
         }
-        text: {
+        text:
+        {
             if (doubles_check.checked)
             {
                 //font.bold = true
@@ -244,11 +244,15 @@ Rectangle{
     //player four label
     Text{
         id: player4_label
-        visible: {
+        visible:
+        {
             if(doubles_check.checked)
-                true
+                true;
+            else
+                false;
         }
-        text: {
+        text:
+        {
             if (doubles_check.checked)
             {
                 //font.bold = true
@@ -300,7 +304,6 @@ Rectangle{
                 else
                     false
             }
-
         }
     }
 
@@ -459,8 +462,9 @@ Rectangle{
         ma.onClicked: {
             //clear the input area
 
-            doubles_Check = doubles_check.checked
+
             match_setup_win.visible = false
+
         }
 
     }
