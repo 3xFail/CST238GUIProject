@@ -5,8 +5,6 @@ import QtQuick.Window 2.2
 /**********************************************
 *Name:  Ryan Williams
 *
-*Lab:   2
-*
 *Project Name: Tennis Tracker
 ***********************************************/
 Window {
@@ -37,14 +35,22 @@ Window {
             splash.visible = false
         }
         onError_chart: {
-            //error_chart.visible = true
+            error_chart.visible = true
+            splash.visible = false
+        }
+        onFocus_scr: {
+            focus_screen.visible = true
+            splash.visible = false
+        }
+        onMatch_catalog:{
+            prev_match.visible = true
             splash.visible = false
         }
     }
 
-   /* Error_Chart{
+    Error_Chart{
         id:error_chart
-        visible: true
+        visible: false
         anchors.fill: parent
         //need close button
         onClose:{
@@ -52,6 +58,26 @@ Window {
             error_chart.visible = false
         }
 
-    }*/
+    }
+
+    FocusScreen{
+        id:focus_screen
+        visible: false
+        anchors.fill: parent
+        onClose:{
+            splash.visible = true
+            focus_screen.visible = false
+        }
+    }
+
+    Prev_Match_Screen{
+        id: prev_match
+        visible: false
+        anchors.fill: parent
+        onClose:{
+            splash.visible = true
+            prev_match.visible = false
+        }
+    }
 
 }

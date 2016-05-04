@@ -11,5 +11,7 @@
         <file>Error_Chart.qml</file>
         <file>Match_Options_Window.qml</file>
         <file>PlayerLocations.qml</file>
+        <file>FocusScreen.qml</file>
+        <file>Prev_Match_Screen.qml</file>
     </qresource>
 </RCC>

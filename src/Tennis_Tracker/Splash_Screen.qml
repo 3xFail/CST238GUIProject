@@ -8,6 +8,8 @@ Rectangle {
 
     signal start_match
     signal error_chart
+    signal focus_scr
+    signal match_catalog
 
     Court_Background{
         id:background
@@ -51,6 +53,9 @@ Rectangle {
            anchors.horizontalCenterOffset: -550
            anchors.verticalCenter: parent.verticalCenter
            anchors.verticalCenterOffset: 150
+           ma.onClicked:{
+               root.match_catalog();
+           }
        }
 
        MyButton{
@@ -64,6 +69,10 @@ Rectangle {
            anchors.horizontalCenterOffset: 550
            anchors.verticalCenter: parent.verticalCenter
            anchors.verticalCenterOffset: -150
+           ma.onClicked:
+           {
+               root.focus_scr();
+           }
        }
 
        MyButton{

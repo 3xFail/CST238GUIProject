@@ -4,7 +4,8 @@ QT += qml quick
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    score_board.cpp
 
 RESOURCES += qml.qrc
 
@@ -16,3 +17,6 @@ include(deployment.pri)
 
 DISTFILES += \
     ../../img/Tennis_Court_diagram.png
+
+HEADERS += \
+    score_board.h

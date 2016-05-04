@@ -1,4 +1,5 @@
 import QtQuick 2.6
+import QtMultimedia 5.6
 
 Rectangle {
     //height and width will be defined outside
@@ -18,6 +19,11 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
     }
 
+    SoundEffect{
+        id:sound
+        source: "../../img/tennis_serve.wav"
+    }
+
     MouseArea{
         id: but_ma
         hoverEnabled: true
@@ -27,6 +33,8 @@ Rectangle {
             parent.color = "Yellow"
         }
         onExited: { parent.color = parent.previouscolor }
+
+        onPressed:{sound.play()}
 
     }
 }
