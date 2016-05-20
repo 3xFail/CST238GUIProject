@@ -13,5 +13,8 @@
         <file>PlayerLocations.qml</file>
         <file>FocusScreen.qml</file>
         <file>Prev_Match_Screen.qml</file>
+        <file>../../img/tennis_serve.wav</file>
+        <file>Scoreboard.qml</file>
+        <file>../../img/Mockups/tennis-ball-clipart-simple_tennis_ball_clip_art_11137.jpg</file>
     </qresource>
 </RCC>

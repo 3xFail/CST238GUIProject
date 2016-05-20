@@ -107,9 +107,11 @@ Rectangle {
             ma.onClicked:{
                 //timer.stop()
                 timer.restart()
+                //timer.stop()
                 match_setup_win.visible = true
                 match_root.match_end()
                 match_setup_win.input_player1name.replace = ""
+                //console.log(match_setup_win.input_player1name)
                 match_setup_win.input_player2name.replace = ""
                 match_setup_win.input_player3name.replace = ""
                 match_setup_win.input_player4name.replace = ""

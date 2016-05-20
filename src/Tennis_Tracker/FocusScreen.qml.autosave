@@ -6,6 +6,7 @@ Rectangle {
     anchors.fill: parent
 
     signal close
+    property string foucus_point_text: ball_image.text_box.text
 
     Image{
         id: ball_image

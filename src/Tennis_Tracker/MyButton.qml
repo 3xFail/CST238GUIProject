@@ -33,8 +33,6 @@ Rectangle {
             parent.color = "Yellow"
         }
         onExited: { parent.color = parent.previouscolor }
-
         onPressed:{sound.play()}
-
     }
 }
