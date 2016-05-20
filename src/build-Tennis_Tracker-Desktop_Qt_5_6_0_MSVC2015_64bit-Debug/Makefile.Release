@@ -174,7 +174,7 @@ release\qrc_qml.cpp: ..\Tennis_Tracker\qml.qrc \
 		..\Tennis_Tracker\Match_Screen.qml \
 		..\..\img\Tennis_Court_diagram.png \
 		..\..\img\tennis_serve.wav \
-		..\..\img\Mockups\tennis-ball-clipart-simple_tennis_ball_clip_art_11137.jpg
+		..\..\img\16637-illustration-of-a-tennis-ball-pv.png
 	C:\Qt\5.6\msvc2015_64\bin\rcc.exe -name qml ..\Tennis_Tracker\qml.qrc -o release\qrc_qml.cpp
 
 compiler_moc_header_make_all:

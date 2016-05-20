@@ -6,10 +6,12 @@ Rectangle {
     anchors.fill: parent
 
     signal close
+    //property string foucus_point_text: ball_image.text_box.text
+
 
     Image{
         id: ball_image
-        source: "../../img/Mockups/tennis-ball-clipart-simple_tennis_ball_clip_art_11137.jpg"
+        source: "/../../img/16637-illustration-of-a-tennis-ball-pv.png"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
 
@@ -18,11 +20,11 @@ Rectangle {
             id: text_box
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            anchors.verticalCenterOffset: 30
+            anchors.verticalCenterOffset: -60
 
-            text_size: 20
+            text_size: 40
             text: "This is a test"
-            text_color: "White"
+            text_color: "Black"
             text_prop.font.bold: true
         }
     }
