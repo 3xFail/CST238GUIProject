@@ -21,9 +21,10 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: -60
+            color: "White"
 
             text_size: 40
-            text: "This is a test"
+            text: "Back Hands"
             text_color: "Black"
             text_prop.font.bold: true
         }

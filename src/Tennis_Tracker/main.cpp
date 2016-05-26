@@ -1,16 +1,17 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include "score_board.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    //todo: create a scoreboard option
+    QQmlApplicationEngine engine;
+
     Match sb;
 
-    QQmlApplicationEngine engine;
-    //engine.rootContext()->setContextProperty("Scoreboard", &sb);
+    engine.rootContext()->setContextProperty("scoreboard", &sb);
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

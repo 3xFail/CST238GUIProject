@@ -2,7 +2,20 @@
 
 Match::Match()
 {
-
+    match_size = 3;
+    play_AD = false;
+    duece = false;
+    p1AD = false;
+    p2AD = false;
+    //player point scores
+    P1PS = LOVE;
+    P2PS = LOVE;
+    //player game scores
+    P1GS = LOVE;
+    P2GS = LOVE;
+    //player set scores
+    P1SS = LOVE;
+    P2SS = LOVE;
 }
 Match::Match(short length, bool ad_play):match_size(length), play_AD(ad_play)
 {
@@ -348,4 +361,40 @@ short Match::get_p1_set()
 short Match::get_p2_set()
 {
     return P2SS;
+}
+
+void Match::set_play_ad(bool play)
+{
+    play_AD = play;
+}
+
+void Match::set_length(short length)
+{
+    match_size = length;
+}
+
+void Match::clear_Score_Board()
+{
+    duece = false;
+    p1AD = false;
+    p2AD = false;
+    //player point scores
+    P1PS = LOVE;
+    P2PS = LOVE;
+    //player game scores
+    P1GS = LOVE;
+    P2GS = LOVE;
+    //player set scores
+    P1SS = LOVE;
+    P2SS = LOVE;
+}
+
+QString Match::get_game_score()
+{
+    return (QString::number(P1GS) + " - " + QString::number(P2GS));
+}
+
+QString Match::get_set_score()
+{
+    return (QString::number(P1SS) + " - " + QString::number(P2SS));
 }

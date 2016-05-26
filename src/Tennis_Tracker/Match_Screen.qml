@@ -39,13 +39,11 @@ Rectangle {
 
         //Scoreboard object
         //todo: make the thing
-        TextRect{
+        Scoreboard{
+            id: sb
             height: 150
             width: 220
             color: "transparent"
-            text: "*ScoreBoard Here*"
-            text_color: "white"
-            text_size: 18
             anchors.horizontalCenter: time_box.horizontalCenter
             anchors.verticalCenter: time_box.verticalCenter
             anchors.verticalCenterOffset: -125
@@ -115,6 +113,7 @@ Rectangle {
                 match_setup_win.input_player2name.replace = ""
                 match_setup_win.input_player3name.replace = ""
                 match_setup_win.input_player4name.replace = ""
+                scoreboard.clear_Score_Board();
             }
 
         }
@@ -158,7 +157,15 @@ Rectangle {
             anchors.horizontalCenterOffset: -640
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: -425
+            ma.onClicked: {
 
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
         }
 
         MyButton{
@@ -172,7 +179,15 @@ Rectangle {
             anchors.left: win_serve.right
             anchors.leftMargin: 10
             anchors.verticalCenter: win_serve.verticalCenter
+            ma.onClicked: {
 
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
         }
 
         MyButton{
@@ -186,6 +201,15 @@ Rectangle {
             anchors.left: win_ret.right
             anchors.leftMargin: 10
             anchors.verticalCenter: win_ret.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
         }
 
         MyButton{
@@ -199,6 +223,15 @@ Rectangle {
             anchors.left: win_for.right
             anchors.leftMargin: 10
             anchors.verticalCenter: win_for.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
         }
 
         MyButton{
@@ -212,6 +245,15 @@ Rectangle {
             anchors.left: win_back.right
             anchors.leftMargin: 10
             anchors.verticalCenter: win_back.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
 
         }
 
@@ -226,6 +268,15 @@ Rectangle {
             anchors.left: win_volly.right
             anchors.leftMargin: 10
             anchors.verticalCenter: win_volly.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_won();
+                sb.player1_points.replace = scoreboard.get_p1_points();
+                //sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p1_points());
+            }
 
         }
 
@@ -242,6 +293,15 @@ Rectangle {
             anchors.horizontalCenterOffset: -640
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: 425
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
 
         }
 
@@ -256,6 +316,16 @@ Rectangle {
             anchors.left: lose_serve.right
             anchors.leftMargin: 10
             anchors.verticalCenter: lose_serve.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
+
 
         }
 
@@ -270,6 +340,16 @@ Rectangle {
             anchors.left: lose_ret.right
             anchors.leftMargin: 10
             anchors.verticalCenter: lose_ret.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
+
 
         }
 
@@ -284,6 +364,16 @@ Rectangle {
             anchors.left: lose_for.right
             anchors.leftMargin: 10
             anchors.verticalCenter: lose_for.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
+
 
         }
 
@@ -298,6 +388,16 @@ Rectangle {
             anchors.left: lose_back.right
             anchors.leftMargin: 10
             anchors.verticalCenter: lose_back.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
+
 
         }
 
@@ -312,6 +412,16 @@ Rectangle {
             anchors.left: lose_volly.right
             anchors.leftMargin: 10
             anchors.verticalCenter: lose_volly.verticalCenter
+            ma.onClicked: {
+
+                scoreboard.p1_loss();
+                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player2_points.replace = scoreboard.get_p2_points();
+                sb.game_s.replace = scoreboard.get_game_score();
+                sb.set_s.replace = scoreboard.get_set_score();
+                console.log(scoreboard.get_p2_points());
+            }
+
 
         }
 
