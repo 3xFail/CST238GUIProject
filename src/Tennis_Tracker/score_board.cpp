@@ -65,10 +65,12 @@ void Match::p1_won()
         if (play_AD)
         {
             //duece case
-            if (get_p1_ad())
+            if (p1AD)
             {
                 P1PS = LOVE;
                 P2PS = LOVE;
+                p2AD = false;
+                p1AD = false;
                 if (P1GS <= 4)
                 {
                     P1GS++;
@@ -84,9 +86,15 @@ void Match::p1_won()
                     P1GS++;
                 }
             }
+            else if(p2AD)
+            {
+                p2AD = false;
+                P2PS = FORT;
+            }
             else if (check_duece())
             {
                 p1AD = true;
+                P1PS = 45;
             }
             else
             {
@@ -183,16 +191,17 @@ void Match::p1_loss()
         if (play_AD)
         {
             //duece case
-            if (get_p2_ad())
+            if (p2AD == true)
             {
                 P1PS = LOVE;
                 P2PS = LOVE;
                 p2AD = false;
-                if (P2PS <= 4)
+                p1AD = false;
+                if (P2GS <= 4)
                 {
                     P2GS++;
                 }
-                else if (P2PS >= 5 && P1GS <= (P2PS - 2))
+                else if (P2GS >= 5 && P1GS <= (P2GS - 2))
                 {
                     P1GS = LOVE;
                     P2GS = LOVE;
@@ -203,9 +212,15 @@ void Match::p1_loss()
                     P2GS++;
                 }
             }
+            else if(p1AD == true)
+            {
+                p1AD = false;
+                P1PS = FORT;
+            }
             else if (check_duece())
             {
                 p2AD = true;
+                P2PS = 45;
             }
             else
             {
@@ -230,11 +245,11 @@ void Match::p1_loss()
                 {
                     P1PS = LOVE;
                     P2PS = LOVE;
-                    if (P2PS <= 4)
+                    if (P2GS <= 4)
                     {
                         P2GS++;
                     }
-                    else if (P2PS >= 5 && P1GS <= (P2PS - 2))
+                    else if (P2GS >= 5 && P1GS <= (P2GS - 2))
                     {
                         P1GS = LOVE;
                         P2GS = LOVE;
@@ -338,13 +353,27 @@ bool Match::get_p2_ad()
 {
     return p2AD;
 }
-short Match::get_p1_points()
+QString Match::get_p1_points()
 {
-    return P1PS;
+    QString ret;
+
+    if(P1PS == 45)
+        ret = "AD";
+    else
+        ret = QString::number(P1PS);
+
+    return ret;
 }
-short Match::get_p2_points()
+QString Match::get_p2_points()
 {
-    return P2PS;
+    QString ret;
+
+    if(P2PS == 45)
+        ret = "AD";
+    else
+        ret = QString::number(P2PS);
+
+    return ret;
 }
 short Match::get_p1_games()
 {

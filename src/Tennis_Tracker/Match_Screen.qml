@@ -8,6 +8,7 @@ Rectangle {
     property string player2name: "\0"
     property string player3name: "\0"
     property string player4name: "\0"
+    property alias match_timer: timer
 
     signal match_end
 
@@ -105,15 +106,19 @@ Rectangle {
             ma.onClicked:{
                 //timer.stop()
                 timer.restart()
-                //timer.stop()
+                timer.stop()
                 match_setup_win.visible = true
                 match_root.match_end()
-                match_setup_win.input_player1name.replace = ""
+                match_setup_win.input_player1name = ""
                 //console.log(match_setup_win.input_player1name)
-                match_setup_win.input_player2name.replace = ""
-                match_setup_win.input_player3name.replace = ""
-                match_setup_win.input_player4name.replace = ""
+                match_setup_win.input_player2name = ""
+                match_setup_win.input_player3name = ""
+                match_setup_win.input_player4name = ""
                 scoreboard.clear_Score_Board();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
             }
 
         }
@@ -160,10 +165,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -182,10 +187,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -204,10 +209,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -226,10 +231,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -248,10 +253,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
 
@@ -271,10 +276,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_won();
-                sb.player1_points.replace = scoreboard.get_p1_points();
-                //sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p1_points());
             }
 
@@ -296,10 +301,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
-                sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -319,7 +324,7 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
+                sb.player1_points = scoreboard.get_p1_points();
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
@@ -343,10 +348,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
-                sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -367,10 +372,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
-                sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -391,10 +396,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
-                sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -415,10 +420,10 @@ Rectangle {
             ma.onClicked: {
 
                 scoreboard.p1_loss();
-                //sb.player1_points.replace = scoreboard.get_p1_points();
-                sb.player2_points.replace = scoreboard.get_p2_points();
-                sb.game_s.replace = scoreboard.get_game_score();
-                sb.set_s.replace = scoreboard.get_set_score();
+                sb.player1_points = scoreboard.get_p1_points();
+                sb.player2_points = scoreboard.get_p2_points();
+                sb.game_s = scoreboard.get_game_score();
+                sb.set_s = scoreboard.get_set_score();
                 console.log(scoreboard.get_p2_points());
             }
 

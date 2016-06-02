@@ -39,6 +39,7 @@ Rectangle {
            ma.onClicked: {
 
                root.start_match()
+
            }
        }
 

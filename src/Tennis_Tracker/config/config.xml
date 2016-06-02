@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+	<Name>Tennis Tracker</Name>
+	<Version>1.0.0</Version>
+	<Title>Tennis Tracker Installer</Title>
+	<Publisher>3xFail</Publisher>
+	<StartMenuDir>Super App</StartMenuDir>
+	<TargetDir> @HomeDir@/InstallationDirectory</TargetDir>
+</Installer>

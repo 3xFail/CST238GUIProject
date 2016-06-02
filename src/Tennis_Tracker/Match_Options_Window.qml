@@ -4,12 +4,14 @@ import QtQuick.Controls.Styles 1.4
 
 Rectangle{
 
-    property string input_player1name: player1_input.text
-    property string input_player2name: player2_input.text
-    property string input_player3name: player3_input.text
-    property string input_player4name: player4_input.text
+    property alias input_player1name: player1_input.text
+    property alias input_player2name: player2_input.text
+    property alias input_player3name: player3_input.text
+    property alias input_player4name: player4_input.text
     property alias doubles_Check: doubles_check.checked
     property alias singles_Check: singles_check.checked
+    property alias start_button: okay_butt
+
 
 
     id:match_setup_win
@@ -406,7 +408,7 @@ Rectangle{
     }
 
     //ad checkbox label
-    Text{
+   /* Text{
         id:ad_label
         text:"Play AD:"
         font.pixelSize: 18
@@ -445,7 +447,7 @@ Rectangle{
             }
         }
     }
-
+*/
     //accept button
     MyButton{
         id: okay_butt
@@ -461,10 +463,17 @@ Rectangle{
         anchors.horizontalCenterOffset: 325
         ma.onClicked: {
             //clear the input area
+            if(fivesets_check.checked)
+            {
+                scoreboard.set_length(5);
+            }
+            else if (proset_check.checked)
+                scoreboard.set_length(1);
 
+            /*if(ad_check.checked == true)
+                scoreboard.set_play_ad(true);*/
 
             match_setup_win.visible = false
-
         }
 
     }

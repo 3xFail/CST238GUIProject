@@ -2,15 +2,15 @@ import QtQuick 2.6
 
 Rectangle {
 
-    property string player1_points: player1_score.text
-    property string player2_points: player2_score.text
-    property string game_s: games_score.text
-    property string set_s: sets_score.text
+    property alias player1_points: player1_score.text
+    property alias player2_points: player2_score.text
+    property alias game_s: games_score.text
+    property alias set_s: sets_score.text
 
 
     Text{
         id:player1_score
-        text:scoreboard.get_p1_points() + "  -  ";
+        text:scoreboard.get_p1_points();
         font.pointSize: 24
         color: "white"
         anchors.horizontalCenter: parent.horizontalCenter
@@ -18,12 +18,23 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: -30
     }
+
+    Text{
+        id:dash
+        text:" - ";
+        font.pointSize: 24
+        color: "white"
+        anchors.left: player1_score.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: -30
+    }
+
     Text{
         id:player2_score
         text:scoreboard.get_p2_points();
         font.pointSize: 24
         color: "white"
-        anchors.left: player1_score.right
+        anchors.left: dash.right
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: -30
     }

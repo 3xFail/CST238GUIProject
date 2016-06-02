@@ -42,8 +42,8 @@ class Match: public QObject
         Q_INVOKABLE bool get_p2_ad();
 
         //getters for all the score elements
-        Q_INVOKABLE short get_p1_points();
-        Q_INVOKABLE short get_p2_points();
+        Q_INVOKABLE QString get_p1_points();
+        Q_INVOKABLE QString get_p2_points();
         Q_INVOKABLE short get_p1_games();
         Q_INVOKABLE short get_p2_games();
         Q_INVOKABLE short get_p1_set();

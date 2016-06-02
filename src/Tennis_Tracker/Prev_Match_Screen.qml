@@ -70,6 +70,39 @@ Rectangle {
        }
 
 
+
+
+       MyButton{
+           id:next_butt
+           height: 75
+           width: 150
+           color: "Lime"
+           text: "Next Match"
+           text_size: 16
+
+
+           ma.onClicked:
+           {
+
+           }
+       }
+
+       MyButton{
+           id:previous_butt
+           height: 75
+           width: 150
+           color: "Lime"
+           text: "Previous Match"
+           text_size: 16
+           anchors.top: next_butt.bottom
+           anchors.topMargin: 15
+
+           ma.onClicked:
+           {
+
+           }
+       }
+
     MyButton{
         id:close_butt
         height: 100

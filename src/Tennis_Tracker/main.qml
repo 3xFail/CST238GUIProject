@@ -32,6 +32,7 @@ Window {
         anchors.fill: parent
         onStart_match:{
             match_screen.visible = true
+            match_screen.match_timer.restart()
             splash.visible = false
         }
         onError_chart: {
