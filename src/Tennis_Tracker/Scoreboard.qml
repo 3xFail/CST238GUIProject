@@ -14,7 +14,7 @@ Rectangle {
         font.pointSize: 24
         color: "white"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: -4
+        anchors.horizontalCenterOffset: -27
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: -30
     }

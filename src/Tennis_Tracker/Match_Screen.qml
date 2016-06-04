@@ -1,6 +1,7 @@
 import QtQuick 2.6
 
 
+
 Rectangle {
     id:match_root
     property int mins: 0
@@ -11,6 +12,33 @@ Rectangle {
     property alias match_timer: timer
 
     signal match_end
+
+    FocusScreen{
+        id: focus_panel
+        anchors.fill: parent
+        visible: false
+        z: 5
+
+        text_in: "Game Over!"
+
+        button.onClicked: {
+            //timer.stop()
+            timer.restart()
+            timer.stop()
+            match_setup_win.visible = true
+            match_setup_win.input_player1name = ""
+            //console.log(match_setup_win.input_player1name)
+            match_setup_win.input_player2name = ""
+            match_setup_win.input_player3name = ""
+            match_setup_win.input_player4name = ""
+            scoreboard.clear_Score_Board();
+            sb.player1_points = scoreboard.get_p1_points();
+            sb.player2_points = scoreboard.get_p2_points();
+            sb.game_s = scoreboard.get_game_score();
+            sb.set_s = scoreboard.get_set_score();
+            match_root.match_end()
+        }
+    }
 
     Court_Background{
         id: background
@@ -169,6 +197,14 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                console.log(scoreboard.end_of_match());
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
+
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -191,6 +227,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -213,6 +254,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -235,6 +281,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p1_points());
             }
         }
@@ -257,6 +308,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p1_points());
             }
 
@@ -280,6 +336,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p1_points());
             }
 
@@ -305,6 +366,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -328,6 +394,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -352,6 +423,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -400,6 +476,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p2_points());
             }
 
@@ -424,6 +505,11 @@ Rectangle {
                 sb.player2_points = scoreboard.get_p2_points();
                 sb.game_s = scoreboard.get_game_score();
                 sb.set_s = scoreboard.get_set_score();
+
+                if(scoreboard.end_of_match())
+                {
+                    focus_panel.visible = true;
+                }
                 console.log(scoreboard.get_p2_points());
             }
 

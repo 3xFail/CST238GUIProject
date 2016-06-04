@@ -5,6 +5,9 @@ Rectangle {
     color: "green"
     anchors.fill: parent
 
+    property alias text_in: text_box.text
+    property alias button: close_butt.ma
+
     signal close
     //property string foucus_point_text: ball_image.text_box.text
 
